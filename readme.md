@@ -45,10 +45,6 @@ To Do
 * Wallet component
   * tests for Wallet component
   * create Wallet component
-    *  test for WalletDetails component
-    *  create WalletDetails component
-    *  test for WalletInputs component
-    *  create WalletInputs component
   * add Wallet component to App.js
 * BalanceHistory Component
   * tests for BalanceHistory component
