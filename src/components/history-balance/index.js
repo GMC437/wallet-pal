@@ -1,27 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-const getBalanceHistoryList = balanceHistory => {
-    return balanceHistory.map((item, index) => {
-      return (
-        <li key={index}>
-          ITEM: {index}
-          <div>Balance: £{item.balance}</div>
-          <div>Amount: £{item.amount}</div>
-          <br />
-        </li>
-      );
-    });
-  };
+import BalanceHistoryList from '../balance-history-list';
 
 const BalanceHistory = ({ balanceHistory }) => {
-  const BalanceHistoryList = getBalanceHistoryList(balanceHistory);
   return (
     <div>
       <div>Balance History</div>
-      <ul>
-        {BalanceHistoryList}
-      </ul>
+      <BalanceHistoryList historyData={balanceHistory} />
     </div>
   );
 };
