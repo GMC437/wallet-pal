@@ -44,8 +44,8 @@ To Do
     *  ~~decrease balance of account~~
 * Wallet component
   * tests for Wallet component
-  * create Wallet component
-  * add Wallet component to App.js
+  * ~~create Wallet component~~
+  * ~~add Wallet component to App.js~~
 * BalanceHistory Component
   * tests for BalanceHistory component
   * create BalanceHistory component
