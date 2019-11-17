@@ -54,6 +54,8 @@
 .wallet {
   font-size: 20px;
   margin: 0;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .walletcard {
@@ -63,6 +65,7 @@
   padding: 10px;
   border-radius: $border-radius;
   max-width: 940px;
+  margin: 0 auto;
 }
 
 .walletcontainer {
