@@ -1,3 +1,4 @@
+import { combineReducers } from 'react-redux';
 import data from '../data';
 
 export const initState = {
@@ -31,3 +32,7 @@ export const balanceHistoryReducer = (
       return state;
   }
 };
+
+export default combineReducers({
+  balanceHistory: balanceHistoryReducer,
+});
