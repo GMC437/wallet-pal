@@ -1,5 +1,6 @@
 import React from 'react';
 import { currency } from '../../data';
+import BalanceItem from '../balance-item';
 
 const getAbsNumber = value => Math.abs(value);
 
@@ -10,7 +11,7 @@ const getListItem = (item, index) => {
     return (
       <li key={index}>
         <div>Initial Amount</div>
-        <div>Amount: £{item.amount}</div>{' '}
+        <BalanceItem currency={currency} currentBalance={item.balance} />
       </li>
     );
   } else if (item.type === 'INCREASE_BALANCE') {
@@ -21,7 +22,7 @@ const getListItem = (item, index) => {
           Increased by {currency}
           {getAbsNumber(item.balance)}
         </div>
-        <div>Amount: £{item.amount}</div>
+        <BalanceItem currency={currency} currentBalance={item.balance} />
         <br />
       </li>
     );
@@ -33,7 +34,7 @@ const getListItem = (item, index) => {
           Decreased by {currency}
           {getAbsNumber(item.balance)}
         </div>
-        <div>Amount: £{item.amount}</div>
+        <BalanceItem currency={currency} currentBalance={item.balance} />
         <br />
       </li>
     );
