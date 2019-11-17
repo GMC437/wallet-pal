@@ -34,8 +34,8 @@ Components
 To Do
 * ~~update readme.md~~
 * create reducer
-  * write tests first for reducer logic
-  * create reducer logic for tests
+  * ~~write tests first for reducer logic~~
+  * ~~create reducer logic for tests~~
   * add store to index.js
 * create actions
   * write tests first for action creators
