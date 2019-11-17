@@ -37,11 +37,11 @@ To Do
   * ~~write tests first for reducer logic~~
   * ~~create reducer logic for tests~~
   * ~~add store to index.js~~
-* create actions
-  * write tests first for action creators
-  * create actions
-    *  increase balance of account
-    *  decrease balance of account
+* ~~create actions~~
+  * ~~write tests first for action creators~~
+  * ~~create actions~~
+    *  ~~increase balance of account~~
+    *  ~~decrease balance of account~~
 * Wallet component
   * tests for Wallet component
   * create Wallet component
