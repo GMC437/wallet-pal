@@ -17,6 +17,7 @@ export const balanceHistoryReducer = (
           id: action.id,
           amount: action.amount,
           balance: action.balance + action.amount,
+          type: action.type,
         },
       ];
     case 'DECREASE_BALANCE':
@@ -26,6 +27,7 @@ export const balanceHistoryReducer = (
           id: action.id,
           amount: action.amount,
           balance: action.balance - action.amount,
+          type: action.type,
         },
       ];
     default:
@@ -34,9 +36,9 @@ export const balanceHistoryReducer = (
 };
 
 export const getBalance = state => {
-    const lastItem = state.length - 1;
-    return state[lastItem].balance;
-}
+  const lastItem = state.length - 1;
+  return state[lastItem].balance;
+};
 
 export default combineReducers({
   balanceHistory: balanceHistoryReducer,
