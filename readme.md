@@ -1,7 +1,7 @@
 # WalletPal
 
 ## Available Scripts
----
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -18,7 +18,7 @@ Launches the test runner on all test files<br />
 Creates a build that can be used for deployments<br />
 
 ## Architecture
----
+
 Components
 * app
   * Wallet
