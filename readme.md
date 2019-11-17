@@ -48,18 +48,10 @@ To Do
   * ~~add Wallet component to App.js~~
 * BalanceHistory Component
   * tests for BalanceHistory component
-  * create BalanceHistory component
+  * ~~create BalanceHistory component~~
     * test for BalanceHistoryList component
-    * create BalanceHistoryList component
-    * test for BalanceHistoryIncreaseListItem component
-    * create BalanceHistoryIncreaseListItem component
-    * test for BalanceHistoryDecreaseListItem component
-    * create BalanceHistoryDecreaseListItem component
-    * test for BalanceHistoryInitialListItem component
-    * create BalanceHistoryInitialListItem component
-    * test for BalanceHistoryEmptyListItem component
-    * create BalanceHistoryEmptyListItem component
-  * add BalanceHistory component to App.js
+    * ~~create BalanceHistoryList component~~
+  * ~~add BalanceHistory component to App.js~~
 * styling Wallet component
 * styling BalanceHistory component
 * browser testing

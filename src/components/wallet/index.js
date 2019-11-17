@@ -3,13 +3,9 @@ import { connect } from 'react-redux';
 import { currency, name } from '../../data';
 import { decreaseBalance, increaseBalance } from '../../actions';
 import { getBalance } from '../../reducers';
+import BalanceItem from '../balance-item';
 
 const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
-  const roundedBalance = Math.round(currentBalance * 100) / 100;
-  const balanceItem =
-    currentBalance < 0
-      ? `-${currency}${Math.abs(roundedBalance)}`
-      : `${currency}${roundedBalance}`;
   let input;
 
   return (
@@ -17,7 +13,7 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
       Wallet
       <div>
         <div>{name}</div>
-        <div>{balanceItem}</div>
+        <BalanceItem currency={currency} currentBalance={currentBalance} />
         {currentBalance < 0 ? <div>Your balance is negative</div> : <br />}
         <input
           type="number"
