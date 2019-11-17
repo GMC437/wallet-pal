@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import styles from './app.scss';
+import Wallet from '../wallet';
 
 class App extends React.Component {
   render() {
-    return <div className={styles.wrapper}>Hello World</div>
+    return (
+      <div className={styles.wrapper}>
+        <Wallet />
+      </div>
+    );
   }
 }
 

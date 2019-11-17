@@ -1,4 +1,4 @@
-import { initState, balanceHistoryReducer } from './index';
+import { initState, balanceHistoryReducer, getBalance } from './index';
 
 const mockData = {
   id: 1,
@@ -17,7 +17,7 @@ describe('reducers', () => {
     it('should handle INCREASE_BALANCE action', () => {
       const data = { ...mockData, type: 'INCREASE_BALANCE' };
       const balanceArr = balanceHistoryReducer(balanceHistory, data);
-      
+
       expect(balanceArr.length).toBe(2);
       expect(balanceArr[1].balance).toBe(13);
     });
@@ -33,9 +33,15 @@ describe('reducers', () => {
     it('should ignore unknown actions', () => {
       const data = { ...mockData, type: 'fake' };
       const balanceArr = balanceHistoryReducer(balanceHistory, data);
-      
+
       expect(balanceArr.length).toBe(1);
       expect(balanceArr[0].balance).toBe(12);
+    });
+  });
+
+  describe('utils function', () => {
+    it('should handle getBalance', () => {
+      expect(getBalance(balanceHistory)).toBe(12);
     });
   });
 });

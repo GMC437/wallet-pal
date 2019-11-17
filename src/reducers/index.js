@@ -33,6 +33,11 @@ export const balanceHistoryReducer = (
   }
 };
 
+export const getBalance = state => {
+    const lastItem = state.length - 1;
+    return state[lastItem].balance;
+}
+
 export default combineReducers({
   balanceHistory: balanceHistoryReducer,
 });
