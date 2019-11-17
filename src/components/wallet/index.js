@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import styles from './styles.scss';
 import { currency, name } from '../../data';
 import { decreaseBalance, increaseBalance } from '../../actions';
 import { getBalance } from '../../reducers';
@@ -9,20 +10,22 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
   let input;
 
   return (
-    <div>
-      Wallet
-      <div>
-        <div>{name}</div>
-        <BalanceItem currency={currency} currentBalance={currentBalance} />
+    <div className={styles.walletcontainer} >
+      <h1 className={styles.wallet} >Wallet</h1>
+      <div className={styles.walletcard} >
+        <div className={styles.name} >{name}</div>
+        <BalanceItem currency={currency} currentBalance={currentBalance} isWallet={true} />
         {currentBalance < 0 ? <div>Your balance is negative</div> : <br />}
         <input
           type="number"
+          className={styles.balanceinput}
           aria-label="balance amount"
           ref={node => (input = node)}
         />
-        <div>
+        <div className={styles.buttons} >
           <button
             type="button"
+            className={styles.increase}
             onClick={() => {
               if (!input.value) {
                 return;
@@ -34,6 +37,7 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
           </button>
           <button
             type="button"
+            className={styles.decrease}
             onClick={() => {
               if (!input.value) {
                 return;
