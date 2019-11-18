@@ -12,7 +12,8 @@
 }
 
 .buttons {
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .decrease {
@@ -53,7 +54,6 @@
 
 .wallet {
   font-size: 20px;
-  margin: 0;
   max-width: 940px;
   margin: 0 auto;
 }
@@ -62,7 +62,6 @@
   background-color: $color-white;
   color: $color-black;
   text-align: center;
-  padding: 10px;
   border-radius: $border-radius;
   max-width: 940px;
   margin: 0 auto;

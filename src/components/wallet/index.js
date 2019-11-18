@@ -54,7 +54,6 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     currentBalance: getBalance(state.balanceHistory),
   };
