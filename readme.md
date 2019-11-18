@@ -22,15 +22,9 @@ Creates a build that can be used for deployments<br />
 Components
 * app
   * Wallet
-    * WalletDetails
-    * WalletInputs
   * BalanceHistory
     * BalanceHistoryList
-    * BalanceHistoryIncreaseListItem
-    * BalanceHistoryDecreaseListItem
-    * BalanceHistoryInitialListItem
-    * BalanceHistoryEmptyListItem
-
+    
 To Do
 * ~~update readme.md~~
 * ~~create reducer~~
@@ -52,10 +46,10 @@ To Do
     * test for BalanceHistoryList component
     * ~~create BalanceHistoryList component~~
   * ~~add BalanceHistory component to App.js~~
-* styling Wallet component
-* styling BalanceHistory component
-* browser testing
-* check input for bad data
-* accessibility
-* responsiveness
-* green focus ring on seleted item
+* ~~styling Wallet component~~
+* ~~styling BalanceHistory component~~
+* ~~browser testing (Chrome, Firefox, Edge)~~
+* ~~check input for bad data~~
+* ~~accessibility~~
+* ~~responsiveness~~
+* ~~green focus ring on seleted item~~
