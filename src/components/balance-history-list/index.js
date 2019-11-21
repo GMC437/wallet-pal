@@ -6,7 +6,7 @@ import BalanceItem from '../balance-item';
 const getAbsNumber = value => Math.abs(value);
 
 const getListItem = (item, index) => {
-  const roundedBalance = Math.round(item.balance * 100) / 100;
+  const roundedBalance = Math.round(item.amount * 100) / 100;
   if (item.id === 0) {
     return;
   } else if (item.id === 1) {
