@@ -11,14 +11,14 @@ const getListItem = (item, index) => {
     return;
   } else if (item.id === 1) {
     return (
-      <li key={index} className={styles.balancehistorylistitem}>
+      <li key={index} className={styles['balance-history-list-item']}>
         <div>Initial Amount</div>
         <BalanceItem currency={currency} currentBalance={item.balance} />
       </li>
     );
   } else if (item.type === 'INCREASE_BALANCE') {
     return (
-      <li key={index} className={styles.balancehistorylistitem}>
+      <li key={index} className={styles['balance-history-list-item']}>
         <div>
           Increased by {currency}
           {getAbsNumber(roundedBalance)}
@@ -29,7 +29,7 @@ const getListItem = (item, index) => {
     );
   } else if (item.type === 'DECREASE_BALANCE') {
     return (
-      <li key={index} className={styles.balancehistorylistitem}>
+      <li key={index} className={styles['balance-history-list-item']}>
         <div>
           Decreased by {currency}
           {getAbsNumber(roundedBalance)}
@@ -51,7 +51,7 @@ const getBalanceHistoryList = balanceHistory => {
   if (balanceHistory.length === 1) {
     const { amount, balance } = balanceHistory;
     return (
-      <li className={styles.listitem}>You have no previous balance history</li>
+      <li className={styles['list-item']}>You have no previous balance history</li>
     );
   } else {
     return detailedBalanceHistory(balanceHistory);
@@ -60,7 +60,7 @@ const getBalanceHistoryList = balanceHistory => {
 
 const BalanceHistoryList = ({ historyData }) => {
   const list = getBalanceHistoryList(historyData.slice().reverse());
-  return <ul className={styles.balancehistorycard}>{list}</ul>;
+  return <ul className={styles['balance-history-card']}>{list}</ul>;
 };
 
 export default BalanceHistoryList;

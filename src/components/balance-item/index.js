@@ -8,7 +8,11 @@ const BalanceItem = ({ currency, currentBalance, isWallet }) => {
       ? `-${currency}${Math.abs(roundedBalance)}`
       : `${currency}${roundedBalance}`;
 
-  return <div className={isWallet? styles.balance: styles.balanceitem}  >{balanceString}</div>;
+  return (
+    <div className={isWallet ? styles['balance'] : styles['balance-item']}>
+      {balanceString}
+    </div>
+  );
 };
 
 export default BalanceItem;
