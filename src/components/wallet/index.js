@@ -10,22 +10,22 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
   let input;
 
   return (
-    <div className={styles.walletcontainer} >
-      <h1 className={styles.wallet} >Wallet</h1>
-      <div className={styles.walletcard} >
-        <div className={styles.name} >{name}</div>
+    <div className={styles['wallet-container']} >
+      <h1 className={styles['wallet']} >Wallet</h1>
+      <div className={styles['wallet-card']} >
+        <div className={styles['name']} >{name}</div>
         <BalanceItem currency={currency} currentBalance={currentBalance} isWallet={true} />
         {currentBalance < 0 ? <div>Your balance is negative</div> : <br />}
         <input
           type="number"
-          className={styles.balanceinput}
+          className={styles['balance-input']}
           aria-label="balance amount"
           ref={node => (input = node)}
         />
-        <div className={styles.buttons} >
+        <div className={styles['buttons']} >
           <button
             type="button"
-            className={styles.increase}
+            className={styles['increase']}
             onClick={() => {
               if (!input.value) {
                 return;
@@ -37,7 +37,7 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
           </button>
           <button
             type="button"
-            className={styles.decrease}
+            className={styles['decrease']}
             onClick={() => {
               if (!input.value) {
                 return;

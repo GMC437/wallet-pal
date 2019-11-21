@@ -1,11 +1,11 @@
 @import './../../styles/_colors';
 @import './../../styles/dimensions';
 
-.balanceinput {
+.balance-input {
   text-align: center;
 }
 
-.balanceinput:focus {
+.balance-input:focus {
   outline: none;
   border-color: green;
   box-shadow: 0 0 5px green;
@@ -58,7 +58,7 @@
   margin: 0 auto;
 }
 
-.walletcard {
+.wallet-card {
   background-color: $color-white;
   color: $color-black;
   text-align: center;
@@ -67,7 +67,7 @@
   margin: 0 auto;
 }
 
-.walletcontainer {
+.wallet-container {
   background-image: linear-gradient(
     to right,
     $color-blue-gradient-start,
