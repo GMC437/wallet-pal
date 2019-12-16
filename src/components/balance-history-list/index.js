@@ -62,7 +62,6 @@ const getBalanceHistoryList = balanceHistory => {
 };
 
 const BalanceHistoryList = ({ historyData }) => {
-//   debugger;
   const reversedhistoryData = historyData.slice().reverse();
   const list = getBalanceHistoryList(reversedhistoryData);
   return <ul className={styles['balance-history-card']}>{list}</ul>;

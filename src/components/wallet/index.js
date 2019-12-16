@@ -58,7 +58,6 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
 };
 
 const mapStateToProps = ({ wallet }) => {
-  //   debugger
   return {
     currentBalance: getBalance(wallet.balanceHistory),
   };

@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import styles from './styles.scss';
 import BalanceHistoryList from '../balance-history-list';
 
-const BalanceHistory = (state) => {
-//   debugger;
+const BalanceHistory = state => {
   return (
     <div className={styles['balance-history-container']}>
       <h2 className={styles['balance-history']}>Balance History</h2>
@@ -13,7 +12,7 @@ const BalanceHistory = (state) => {
   );
 };
 
-const mapStateToProps = ({wallet}) => {
+const mapStateToProps = ({ wallet }) => {
   return { balanceHistory: wallet.balanceHistory };
 };
 

@@ -6,7 +6,6 @@ export const initState = {
 };
 
 export const walletReducer = (state = initState, action) => {
-  // debugger
   switch (action.type) {
     case 'INCREASE_BALANCE':
       return (state = {
@@ -39,7 +38,6 @@ export const walletReducer = (state = initState, action) => {
 };
 
 export const getBalance = balanceHistory => {
-  //   debugger;
   const lastItem = balanceHistory.length - 1;
   return balanceHistory[lastItem].balance;
 };
