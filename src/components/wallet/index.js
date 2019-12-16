@@ -10,11 +10,15 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
   let input;
 
   return (
-    <div className={styles['wallet-container']} >
-      <h1 className={styles['wallet']} >Wallet</h1>
-      <div className={styles['wallet-card']} >
-        <div className={styles['name']} >{name}</div>
-        <BalanceItem currency={currency} currentBalance={currentBalance} isWallet={true} />
+    <div className={styles['wallet-container']}>
+      <h1 className={styles['wallet']}>Wallet</h1>
+      <div className={styles['wallet-card']}>
+        <div className={styles['name']}>{name}</div>
+        <BalanceItem
+          currency={currency}
+          currentBalance={currentBalance}
+          isWallet={true}
+        />
         {currentBalance < 0 ? <div>Your balance is negative</div> : <br />}
         <input
           type="number"
@@ -22,7 +26,7 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
           aria-label="balance amount"
           ref={node => (input = node)}
         />
-        <div className={styles['buttons']} >
+        <div className={styles['buttons']}>
           <button
             type="button"
             className={styles['increase']}
@@ -53,9 +57,10 @@ const Wallet = ({ currentBalance, decreaseBalance, increaseBalance }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ wallet }) => {
+  //   debugger
   return {
-    currentBalance: getBalance(state.balanceHistory),
+    currentBalance: getBalance(wallet.balanceHistory),
   };
 };
 

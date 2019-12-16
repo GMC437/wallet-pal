@@ -1,4 +1,4 @@
-import { initState, balanceHistoryReducer, getBalance } from './index';
+import { initState, walletReducer, getBalance } from './index';
 
 const mockData = {
   id: 1,
@@ -7,41 +7,39 @@ const mockData = {
 };
 
 describe('reducers', () => {
-  const { balanceHistory } = initState;
-
   describe('balanceHistoryReducer', () => {
     it('should provide the initial state', () => {
-      expect(balanceHistory.length).toBe(1);
+      expect(initState.balanceHistory.length).toBe(1);
     });
 
     it('should handle INCREASE_BALANCE action', () => {
       const data = { ...mockData, type: 'INCREASE_BALANCE' };
-      const balanceArr = balanceHistoryReducer(balanceHistory, data);
-
-      expect(balanceArr.length).toBe(2);
-      expect(balanceArr[1].balance).toBe(13);
+      const { balanceHistory } = walletReducer(initState, data);
+        
+      expect(balanceHistory.length).toBe(2);
+      expect(balanceHistory[1].balance).toBe(13);
     });
 
     it('should handle DECREASE_BALANCE action', () => {
       const data = { ...mockData, type: 'DECREASE_BALANCE' };
-      const balanceArr = balanceHistoryReducer(balanceHistory, data);
+      const { balanceHistory } = walletReducer(initState, data);
 
-      expect(balanceArr.length).toBe(2);
-      expect(balanceArr[1].balance).toBe(11);
+      expect(balanceHistory.length).toBe(2);
+      expect(balanceHistory[1].balance).toBe(11);
     });
 
     it('should ignore unknown actions', () => {
       const data = { ...mockData, type: 'fake' };
-      const balanceArr = balanceHistoryReducer(balanceHistory, data);
+      const { balanceHistory } = walletReducer(initState, data);
 
-      expect(balanceArr.length).toBe(1);
-      expect(balanceArr[0].balance).toBe(12);
+      expect(balanceHistory.length).toBe(1);
+      expect(balanceHistory[0].balance).toBe(12);
     });
   });
 
   describe('utils function', () => {
     it('should handle getBalance', () => {
-      expect(getBalance(balanceHistory)).toBe(12);
+      expect(getBalance(initState.balanceHistory)).toBe(12);
     });
   });
 });
