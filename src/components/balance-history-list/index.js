@@ -1,7 +1,7 @@
 import React from 'react';
 import { currency } from '../../data';
 import styles from './styles.scss';
-import BalanceItem from '../balance-item';
+import BalanceHistoryListItem from '../balance-history-list-item';
 
 const getAbsNumber = value => Math.abs(value);
 
@@ -12,32 +12,30 @@ const getListItem = (item, index) => {
     return;
   } else if (item.id === 1) {
     return (
-      <li key={index} className={styles['balance-history-list-item']}>
-        <div>Initial Amount</div>
-        <BalanceItem currency={currency} currentBalance={item.balance} />
-      </li>
+      <BalanceHistoryListItem
+        key={index}
+        message="Initial Amount"
+        currency={currency}
+        balance={item.balance}
+      />
     );
   } else if (item.type === 'INCREASE_BALANCE') {
     return (
-      <li key={index} className={styles['balance-history-list-item']}>
-        <div>
-          Increased by {currency}
-          {getAbsNumber(roundedBalance)}
-        </div>
-        <BalanceItem currency={currency} currentBalance={item.balance} />
-        <br />
-      </li>
+      <BalanceHistoryListItem
+        key={index}
+        message={`Increased by ${currency}${getAbsNumber(roundedBalance)}`}
+        currency={currency}
+        balance={item.balance}
+      />
     );
   } else if (item.type === 'DECREASE_BALANCE') {
     return (
-      <li key={index} className={styles['balance-history-list-item']}>
-        <div>
-          Decreased by {currency}
-          {getAbsNumber(roundedBalance)}
-        </div>
-        <BalanceItem currency={currency} currentBalance={item.balance} />
-        <br />
-      </li>
+      <BalanceHistoryListItem
+        key={index}
+        message={`Decreased by ${currency}${getAbsNumber(roundedBalance)}`}
+        currency={currency}
+        balance={item.balance}
+      />
     );
   }
 };
