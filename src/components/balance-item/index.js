@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
 const BalanceItem = ({ currency, currentBalance, isWallet }) => {
@@ -14,5 +15,11 @@ const BalanceItem = ({ currency, currentBalance, isWallet }) => {
     </div>
   );
 };
+
+BalanceItem.propTypes = {
+    currency: PropTypes.string.isRequired,
+    currentBalance: PropTypes.number.isRequired,
+    isWallet: PropTypes.bool
+}
 
 export default BalanceItem;

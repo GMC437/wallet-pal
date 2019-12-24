@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { currency } from '../../data';
 import styles from './styles.scss';
 import BalanceHistoryListItem from '../balance-history-list-item';
@@ -63,6 +64,10 @@ const BalanceHistoryList = ({ historyData }) => {
   const reversedhistoryData = historyData.slice().reverse();
   const list = getBalanceHistoryList(reversedhistoryData);
   return <ul className={styles['balance-history-card']}>{list}</ul>;
+};
+
+BalanceHistoryList.propTypes = {
+    historyData: PropTypes.array.isRequired
 };
 
 export default BalanceHistoryList;
