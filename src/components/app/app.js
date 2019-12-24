@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './app.scss';
 import Wallet from '../wallet';
-import HistoryBalance from '../history-balance'; 
+import HistoryBalance from '../balance-history'; 
 
 class App extends React.Component {
   render() {

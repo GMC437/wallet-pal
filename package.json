@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "react": "^16.5.2",
